@@ -28,6 +28,7 @@ public class Main {
                         String passwordRegister = scanner.nextLine();
                         UserService.register(usernameRegister, passwordRegister);
                         break;
+
                     case "/login":
                         System.out.print("Введите имя пользователя: ");
                         String usernameLogin = scanner.nextLine();
@@ -39,7 +40,8 @@ public class Main {
                     case "/logout":
                         UserService.logout();
                         break;
-                    case "/checkLogin":
+
+                    case "/check":
                         UserService.checkLogin();
                         break;
 
@@ -98,18 +100,17 @@ public class Main {
 
     public static void printMenu() {
         System.out.println(""" 
-                \n
                 Доступные команды:
                 /register - Регистрация пользователя
                 /login - Вход в систему
                 /checkLogin - Проверка авторизации
-                /logout - Выход из системы \n
+                /logout - Выход из системы
                 /addLimit - Добавить лимит
                 /getLimits - Получить лимиты
-                /removeLimit - Удалить лимит \n
+                /removeLimit - Удалить лимит
                 /addIncome - Добавить доход
-                /addOutcome - Добавить расход \n
-                /getInfo - Получить информацию о пользователе \n
+                /addOutcome - Добавить расход
+                /getInfo - Получить информацию о пользователе
                 /exit - Выход из программы
                 """);
     }

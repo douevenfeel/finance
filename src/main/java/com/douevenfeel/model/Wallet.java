@@ -42,4 +42,13 @@ public class Wallet {
     public double getBalance() {
         return balance;
     }
+
+    @Override
+    public String toString() {
+        return "Wallet{" +
+                "operations=" + operations +
+                ", limits=" + limits +
+                ", balance=" + balance +
+                '}';
+    }
 }
